@@ -11,6 +11,135 @@
 </head>
 
 <body>
+    <!-- Logo -->
+	<div class="logo-container">
+		<img src="https://alebrije.ec/wp-content/uploads/2025/07/Photoroom_20241026_144047-e1751614896210.png"
+			class="logo">
+		</a>
+	</div>
+
+	<!-- header -->
+	<header>
+		<nav class="menu-buscador">
+<div class="menu-links">
+    <a href="#" onclick="mostrarSeccion('inicio')">INICIO</a>
+    <a href="#" onclick="mostrarSeccion('acerca')">ACERCA DE NOSOTROS</a> 
+    <a href="#" onclick="mostrarSeccion('proceso')">PROCESO CREATIVO</a>
+    <a href="#" onclick="mostrarSeccion('presentaciones')">PRESENTACIONES</a>
+    <a href="#" onclick="mostrarSeccion('reencuentros')">REENCUENTROS ♥</a>
+</div>
+
+
+		</nav>
+	</header>
+    <section class="hero">
+    <div class="hero-content">
+        <h1>Tu mascota no se va… se transforma</h1>
+        <p>
+            En Alebrije convertimos su esencia en arte para que permanezca contigo por siempre.
+        </p>
+
+        <a href="https://wa.me/593983409500?text=Hola,%20quiero%20información%20sobre%20Alebrije" 
+           class="btn-principal">
+           💬 Hablar por WhatsApp
+        </a>
+    </div>
+</section>
+<div id="inicio" class="seccion activa">
+    <h2>Bienvenido a Alebrije</h2>
+    <p>
+        En Alebrije honramos la memoria de tu mascota con amor, respeto y arte. 
+        Creamos esculturas personalizadas mediante impresión 3D que preservan su esencia 
+        para que permanezca contigo por siempre.
+    </p>
+</div>
+
+<div id="acerca" class="seccion">
+    <h2>¿Quiénes Somos?</h2>
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b" class="img-seccion">
+   
+    <p>
+        Somos una empresa ecuatoriana dedicada a brindar un servicio digno para el último adiós 
+        de tu mascota. Combinamos arte y tecnología para crear esculturas únicas que acompañan 
+        el proceso de sanación.
+    </p>
+
+    <p>
+        Nacimos del amor profundo hacia nuestros propios compañeros, buscando una forma de 
+        mantener su esencia con nosotros. Así surge Alebrije, creando memoriales únicos 
+        que honran el amor incondicional.
+    </p>
+
+    <h3>¿Qué es un Alebrije?</h3>
+    <p>
+        Los alebrijes representan guías espirituales llenos de color y energía. 
+        Se dice que nuestras mascotas, al partir, se transforman en estas figuras 
+        que nos cuidan y acompañan desde otro plano.
+    </p>
+</div>
+
+<div id="proceso" class="seccion">
+     <h2>Proceso</h2>
+
+    <div class="paso">🐾 Recepción</div><p>Recogemos a tu mascota con respeto en tu domicilio o veterinaria.</p>
+    <div class="paso">🔥 Transición (cremación)</div> <p>Realizamos la cremación con un horno especializado que cumple normas ambientales.</p>
+    <div class="paso">🎨 Creación 3D</div> <p>
+        Diseñamos una escultura 3D única, la imprimimos y la pintamos a mano con máximo detalle.
+    </p>
+    <div class="paso">💖 Reencuentro</div> <p>
+        Entregamos a tu mascota en su nueva forma para que siga contigo en casa.
+    </p>
+    <h3>Detalles técnicos</h3>
+    <p>
+        • Modelado 3D profesional<br>
+        • Impresión en bioplástico resistente<br>
+        • Pintura artística a mano
+    </p>
+</div>
+
+
+<div id="presentaciones" class="seccion">
+    <h2>Nuestras Presentaciones</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>🐾 Pet Escultura</h3>
+            <p>Escultura realista con cenizas en su interior.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌱 Maceta Pet</h3>
+            <p>Una nueva vida que crece junto a su memoria.</p>
+        </div>
+
+        <div class="card">
+            <h3>💎 Joyas Cenizarias</h3>
+            <p>Lleva su esencia siempre contigo.</p>
+        </div>
+
+        <div class="card">
+            <h3>🖼️ Retrato 3D</h3>
+            <p>Arte personalizado con gran realismo.</p>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="reencuentros" class="seccion">
+    <h2>Reencuentro ♥</h2>
+
+    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a" class="img-seccion">
+
+    <p>
+        Tu mascota vuelve a casa en una nueva forma, pero con el mismo amor eterno.
+    </p>
+
+    <a href="https://wa.me/593983409500?text=Hola,%20quiero%20información" class="btn-wsp">
+        💬 Contactar por WhatsApp
+    </a>
+</div>
 
     <!-- OVERLAY -->
     <div id="fx-overlay" class="fx-overlay"></div>
@@ -21,7 +150,7 @@
         <!-- SUBBOTONES -->
         <div id="fx-submenu" class="fx-submenu">
 
-            <a href="https://wa.me/593983409500?text=Hola,%20necesito%20información%20sobre%20servicios%20funerarios"
+            <a href="https://wa.me/593983409500?text=Hola,%20acabo%20de%20ver%20su%20página%20y%20quiero%20información%20sobre%20cómo%20conservar%20a%20mi%20mascota"
                 target="_blank" class="fx-btn fx-sub">
                 <i class="fab fa-whatsapp"></i>
             </a>
@@ -46,25 +175,8 @@
 
     </div>
 
-    <script>
-        (function () {
-            const menu = document.getElementById("fx-menu");
-            const submenu = document.getElementById("fx-submenu");
-            const overlay = document.getElementById("fx-overlay");
-            const btn = document.getElementById("fx-toggle");
 
-            function toggle() {
-                submenu.classList.toggle("fx-show");
-                overlay.classList.toggle("fx-show");
-                menu.classList.toggle("fx-active");
-                menu.classList.toggle("fx-animar");
-            }
-
-            btn.addEventListener("click", toggle);
-            overlay.addEventListener("click", toggle);
-        })();
-    </script>
-
-</body>
-
+</div>
+<script src="script.js"></script></body>
+</html>
 </html>
