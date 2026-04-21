@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menú flotante</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- OVERLAY -->
+    <div id="fx-overlay" class="fx-overlay"></div>
+
+    <!-- CONTENEDOR -->
+    <div id="fx-menu" class="fx-contenedor fx-animar">
+
+        <!-- SUBBOTONES -->
+        <div id="fx-submenu" class="fx-submenu">
+
+            <a href="https://wa.me/593983409500?text=Hola,%20necesito%20información%20sobre%20servicios%20funerarios"
+                target="_blank" class="fx-btn fx-sub">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="#" class="fx-btn fx-sub fx-instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#" class="fx-btn fx-sub fx-twitter">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+
+        </div>
+
+        <!-- BOTÓN PRINCIPAL -->
+        <button id="fx-toggle" class="fx-btn">
+            <i class="fas fa-phone"></i>
+        </button>
+
+        <!-- TEXTO -->
+        <div class="fx-texto">Contáctanos</div>
+
+    </div>
+
+    <script>
+        (function () {
+            const menu = document.getElementById("fx-menu");
+            const submenu = document.getElementById("fx-submenu");
+            const overlay = document.getElementById("fx-overlay");
+            const btn = document.getElementById("fx-toggle");
+
+            function toggle() {
+                submenu.classList.toggle("fx-show");
+                overlay.classList.toggle("fx-show");
+                menu.classList.toggle("fx-active");
+                menu.classList.toggle("fx-animar");
+            }
+
+            btn.addEventListener("click", toggle);
+            overlay.addEventListener("click", toggle);
+        })();
+    </script>
+
+</body>
+
+</html>

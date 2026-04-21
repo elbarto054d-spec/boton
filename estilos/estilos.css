@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+    color: #e5e5e5;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #d4af37;
+}
+
+.encabezado h1 {
+    margin: 0;
+    color: #d4af37;
+    font-weight: normal;
+}
+
+.encabezado p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* MENÚ */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background: #111;
+    padding: 10px;
+    position: fixed;
+    top: 90px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+.menu a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #d4af37;
+}
+
+/* SECCIONES */
+.seccion {
+    display: none;
+    margin-top: 160px;
+}
+
+.activa {
+    display: block;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* TARJETAS */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #d4af37;
+    padding: 15px;
+    margin: 12px 0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/* BOTÓN */
+button {
+    background: #d4af37;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b8962e;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    text-decoration: none;
+    /* animación suave */
+    transition: 0.3s;
+    /* brillo inicial suave */
+    box-shadow: 0 0 10px #25D366;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.whatsapp:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px #25D366, 0 0 40px #25D366;
+}
+
+/* BOTÓN CON EFECTO */
+button {
+    background: #d4af37;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    animation: brillo 2s infinite alternate, flotar 3s ease-in-out infinite;
+    /* Animación */
+}
+
+/* EFECTO FOSFORESCENTE */
+@keyframes brillo {
+    0% {
+        box-shadow: 0 0 5px #706e65;
+    }
+
+    100% {
+        box-shadow: 0 0 20px #66a7f1, 0 0 40px #d4af37;
+    }
+}
+
+/* MOVIMIENTO SUAVE (FLOTAR) */
+@keyframes flotar {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* HOVER MÁS INTENSO */
+button:hover {
+    background: #b8962e;
+    box-shadow: 0 0 25px #d4af37, 0 0 60px #d4af37;
+}
+
+/* CONTENEDOR */
+.fx-contenedor {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* ANIMACIÓN FLOTANTE */
+.fx-animar {
+    animation: fx-flotar 2s infinite ease-in-out;
+}
+
+@keyframes fx-flotar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* TEXTO */
+.fx-texto {
+    margin-top: 8px;
+    background: black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+/* BOTÓN PRINCIPAL */
+.fx-btn {
+    background: #25D366;
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #25D366;
+    font-size: 20px;
+}
+
+.fx-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px #25D366, 0 0 40px #25D366;
+}
+
+/* SUBBOTONES */
+.fx-submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+/* ESTADO ACTIVO */
+.fx-show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* SUB BOTONES */
+.fx-sub {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+}
+
+/* COLORES */
+.fx-instagram {
+    background: #E4405F;
+    box-shadow: 0 0 10px #E4405F;
+}
+
+.fx-instagram:hover {
+    box-shadow: 0 0 20px #E4405F, 0 0 40px #E4405F;
+}
+
+.fx-twitter {
+    background: #000;
+    box-shadow: 0 0 10px #000;
+}
+
+.fx-twitter:hover {
+    box-shadow: 0 0 20px #000, 0 0 40px #000;
+}
+
+/* OVERLAY */
+.fx-overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at calc(100% - 60px) calc(100% - 60px), rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 9998;
+}
+
+.fx-overlay.fx-show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ICONO ANIMACIÓN */
+.fx-contenedor i {
+    transition: transform 0.3s;
+}
+
+.fx-active i {
+    animation: fx-pulse 1s infinite;
+}
+
+@keyframes fx-pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
